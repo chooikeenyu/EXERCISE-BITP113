@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+//Start question number 2 below
+
+    int minute, hour, second;
+    
+    int SCND_TO_HOUR = 3600;
+    int SCND_TO_MINUTE = 60;
+    int x_seconds;
+    cout<<"Please enter the total time in seconds"<<endl;
+    cin>>x_seconds;
+    
+    hour = x_seconds / SCND_TO_HOUR;
+    minute = (x_seconds % SCND_TO_HOUR) / SCND_TO_MINUTE;
+    second = x_seconds % SCND_TO_MINUTE;
+    
+    
+    cout<<x_seconds<<"seconds are equal to "<<hour<<"hours,"<<minute<<"minutes,"<<second<<"seconds"<<endl;
+    
+    return 0;
+}
