@@ -1,0 +1,32 @@
+//This program demonstrates switch statement.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    
+    char grade;
+    cout<<"Please enter midterm grade : ";
+    cin>>grade;
+    
+    switch (grade)
+    {
+        case 'A'     :
+              cout << "Excellent.";
+                     break;
+        case 'B'     :
+              cout << "Very good.";
+              break;
+        case 'C'     :
+              cout << "Passed.";
+              break;
+        case 'D'     :
+        case 'F'     :
+              cout <<"Not good. Study harder.";
+                    break;
+        default      :
+              cout << "Not a possible grade.";
+}
+cout<<"\nEnd of program."<<endl;
+return 0;
+}

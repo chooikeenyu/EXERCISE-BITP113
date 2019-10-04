@@ -1,0 +1,33 @@
+//This program demonstrates if..else if statement
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    
+    char grade;
+    cout<<"Please enter midterm grade : ";
+    cin>>grade;
+    
+    if(grade=='A')
+    {
+           cout << "Excellent.";
+    }
+    else if(grade=='B')
+    {
+           cout << "Very good.";
+    }
+    else if(grade=='C')
+    {
+          cout << "Passed.";
+    }
+    else if(grade=='D' || grade=='F' )
+    {
+          cout <<"Not good. Study harder.";
+    }
+    else 
+          cout << "Not a possible grade.";
+          
+      cout<<"\nEnd of program."<<endl;
+      return 0;
+}

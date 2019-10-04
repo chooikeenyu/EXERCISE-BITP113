@@ -1,0 +1,25 @@
+/* This program calculates a clerks's pay rate at RM8 per hour. The minimum working hours is 6. The ?: operators adjust hours to 6 if the hours entered is less than 6 hours. */
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+    const double PAY_RATE = 8.0;
+    const int MIN_HOURS = 6;
+    
+    double hours, charges;
+    
+    // Get the hours worked.
+    cout <<"How many hours worked?: ";
+    cin >> hours;
+    
+    // Determine the hours to charge for.
+    hours = hours < MIN_HOURS ? MIN_HOURS : hours;
+    
+    // Calculate and display the charges.
+    charges = PAY_RATE * hours;
+    cout << fixed <<showpoint<<setprecision(2) <<"The pay is RM" << charges << endl;
+    
+    return 0;
+}
