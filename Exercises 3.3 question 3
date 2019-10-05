@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int years,monthly_payment;
+    double loan_amount, annual_interest_rate;
+   
+    
+    cout<<"Please enter the amount of loan that you borrow"<<endl;
+    cin>>loan_amount;
+    
+    cout<<"Please enter the annual interest rate(%)"<<endl;
+    cin>>annual_interest_rate;
+    
+    cout<<"Please enter the time (in year)"<<endl;
+    cin>>years;
+    
+    //calculation
+    monthly_payment = loan_amount * (1+annual_interest_rate/100 *years) / (years*12);
+    
+    cout<<"The monthly payment is :"<< monthly_payment << endl;
+    
+    return 0;
+}
