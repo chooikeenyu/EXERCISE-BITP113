@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   double KE,m,v;
+   
+   cout<<"Please enter the mass in kg"<<endl;
+   cin>>m;
+   
+   cout<<"Please enter the velocity in (m/s)"<<endl;
+   cin>>v;
+   
+   //calculation
+   KE = m*v*v/2;
+   
+   cout<<"The kinetic energy is :"<<KE<<" joules"<<endl;
+   
+    return 0;
+}
