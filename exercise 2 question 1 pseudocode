@@ -1,7 +1,0 @@
-1.0 Start
-2.0 Input User data
-    2.1 Read the temperature in degree Celsius,celsius
-3.0 Calculate the temperature in Fahrenheit 
-    (Fahrenheit = 32 + (9*Celsius/5)
-4.0 Print the output(temperature) in Fahrenheit
-5.0 End
