@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char x;
+	int y;
+	double charge;
+
+	cout << "Please enter the package you want to purchase, RM20.00 per quantity, ";
+	cout << "Quantites 10-19 is package A, 20-49 is package B ,50-99 is package C, 100 or more is package D" << endl;
+	cin >> x;
+	cout << "Enter the quantites you want to purchase" << endl;
+	cin >> y;
+
+	switch (x)
+	{
+	case 'A':
+		if ((y >= 10) || (y <= 19)) {
+			charge = (y * 20 * 0.8);
+			cout << "The total cost is RM " << charge << endl;
+			break;
+		}
+
+	case 'B':
+		if ((y >= 20) || (y <= 49)) {
+			charge = (y * 20 * 0.7);
+			cout << "The total cost is RM " << charge << endl;
+			break;
+		}
+
+	case 'C':
+		if ((y >= 50) || (y <= 99)) {
+			charge = (y * 20 * 0.6);
+			cout << "The total cost is RM " << charge << endl;
+			break;
+		}
+
+	case 'D':
+		if (y >= 100) {
+			charge = (y * 20 * 0.5);
+			cout << "The total cost is RM " << charge << endl;
+			break;
+		}
+	default:
+		cout << "Wrong";
+	}
+
+
+	return 0;
+}
