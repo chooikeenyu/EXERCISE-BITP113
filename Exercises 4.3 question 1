@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char vehicle;
+    double hour,charge;
+    
+    cout<<"Please enter your vehicle type C = car, L = lorry,B = Bus"<<endl;
+    cin>>vehicle;
+    cout<<"Enter hours parked"<<endl;
+    cin>>hour;
+
+    
+    switch (vehicle)
+{    
+    case 'C':
+    if (hour<=3){
+    cout<<"RM1.00";
+    }
+    
+    else if (hour>3){
+    charge = 1.0 + 1.50*(hour-3);
+    cout<<"RM"<<charge<<endl;
+	break;
+    }
+        
+
+    
+    case 'L' :
+    if (hour<=3){
+        cout<<"RM1.50";
+    }
+    
+    else if (hour>3){
+    charge = 1.50 + 2.50*(hour-3);
+    cout<<"RM"<<charge<<endl;
+	break;
+    }
+    
+    case 'B':
+    if (hour<=3){
+        cout<<"RM2.00";
+    }
+    
+    else if (hour>3){
+        charge = 2.00 + 3.50*(hour-3);
+        cout<<"RM"<<charge<<endl;
+		break;
+	}	
+	default :
+	cout<<"ERROR";
+    }
+
+    return 0;
+}
+    
