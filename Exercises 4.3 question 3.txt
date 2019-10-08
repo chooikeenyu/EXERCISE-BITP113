@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double eyes1,nosechin1,eyes2,nosechin2,eyes3,nosechin3,ratio1,ratio2,ratio3,difference12,difference13,difference23;
+    
+    cout<<"Please enter values in cm."<<endl;
+    cout<<"Please enter eye distance and nose to chin distance for image 1: ";
+    cin>>eyes1 >>nosechin1;
+    cout<<"Please enter eye distance and nose to chin distance for image 2: ";
+    cin>>eyes2 >>nosechin2;
+    cout<<"Please enter eye distance and nose to chin distance for image 3: ";
+    cin>>eyes3 >>nosechin3;
+    cout<<endl;
+    
+    ratio1 = eyes1/nosechin1;
+    ratio2 = eyes2/nosechin2;
+    ratio3 = eyes3/nosechin3;
+    
+    difference12 = fabs(ratio1 - ratio2);
+    difference13 = fabs(ratio1 - ratio3);
+    difference23 = fabs(ratio2 - ratio3);
+    
+    if ((difference12<=difference13) && (difference12<=difference23))
+    {   cout<<"Best matches is between image 1 and image 2.";
+    }
+    
+    else if ((difference13<=difference12) && (difference13<=difference23))
+    {   cout<<"Best matches is between image 1 and image 3.";
+    }
+    
+    else if ((difference23<=difference13) && (difference23<=difference12))
+    {   cout<<"Best matches is between image 2 and image 3.";
+    }
+    
+    return 0;
+}
