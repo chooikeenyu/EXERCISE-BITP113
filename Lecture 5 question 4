@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int num;
+	int repeat;
+
+	do
+	{
+		cout<< "Please enter an integer : ";
+		cin>> num;
+		if ((num % 2 == 1) || (num % 2 == -1))
+			cout<<num<<" is an odd number." << endl;
+		else
+			cout<<num<<" is an even number." << endl;
+
+		cout<<"Enter Y or y if you want to test the another number : ";
+		cin>> repeat;
+	} 
+	while ((repeat == 'Y') || (repeat == 'y'));
+	
+	return 0;
+}
