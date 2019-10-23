@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+const double LITRE_TO_GALLONS = 0.264179;
+void kilometrespergaloon (double,double);
+
+
+int main()
+{	
+	double petrol, kilometres;
+	cout << "Please enter the number of litres of petrol consumed by your car" << endl;
+	cin >> petrol;
+
+	cout << "Please enter the number of kilometres travelled by you car" << endl;
+	cin >> kilometres;
+	
+	kilometrespergaloon(petrol,kilometres);
+
+	return 0;
+}
+
+void kilometrespergaloon(double p,double k)
+{
+	double result;
+	result = (k / (p*LITRE_TO_GALLONS));
+	cout << "The number of kilometres per galoon is :" << result << endl;
+}
