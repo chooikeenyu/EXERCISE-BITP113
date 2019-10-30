@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void number (double& x1, double& x2, double& y, double& y2);
+void first (double& a, double x1, double x2);
+void second (double& , double y, double y2);
+void distance (double&, double& ,double &);
+ double x1, x2, y ,y2;
+double a ,b, d;
+
+int main()
+{
+ 
+    double e; 
+ 
+    number (x1, x2, y, y2);
+    first (a, x1, x2);
+    second (b, y, y2);
+    distance (e,a,b);
+    cout<<"Given the points (1, -2) and (-3,5) ,the system will calculate the distance between them."<<endl;
+    cout<<"The distance d between them is "<<e;
+    
+    
+    return 0;
+}
+void number (double& x1, double& x2, double& y, double& y2)
+{
+     x1 = 1, x2 = -2 , y = -3, y2 = 5;
+}
+
+void first (double& a, double x1, double x2)
+{
+    
+    a = pow((x2-x1),2);
+}
+
+void second (double& b, double y, double y2)
+{
+    
+    b = pow((y-y2),2);
+}
+
+void distance (double& d, double& a, double& b)
+{
+    d = sqrt(a+b);
+}

@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int firstNum, secondNum, sum;
+    
+    cout<<"Please enter two integers"<<endl;
+    cin>>firstNum>>secondNum;
+    
+    while (firstNum > secondNum)
+    {
+        cout<<"Please enter the integers again";
+        break;
+    }
+    
+    //question 2a
+    cout<<"if first and second integers are odd, system will display it"<<endl;
+    if ((firstNum %2!=0) || (secondNum %2!=0))
+    {
+        cout<<firstNum<<" and "<<secondNum<<" are odd numbers";
+    }
+    
+    //2b
+    
+    if ((firstNum %2==0) || (secondNum %2==0))
+    {
+        sum = firstNum + secondNum;
+        cout<<"The sum of first integer and second integer is : "<<sum;
+    }
+    
+    //2c
+    
+    cout<<endl<<endl<<endl<<endl;
+    
+    for (int i = 1; i<=10; i++)
+    {
+        cout<<i <<"\t\t" <<(i*i)<<endl;
+    }
+    
+    //2d
+    
+    if ((firstNum %2!=0) || (secondNum %2!=0))
+    {
+        int sum1;
+        sum1 = ((firstNum*firstNum*secondNum*secondNum));
+        cout<<"The sum of the square of the odd numbers between first and second integer is : "<<sum1;
+    }
+	
+    //2e
+    
+    return 0;    
+    
+}

@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+#include <string>
+
+int main()
+{
+    int num, evennum=0, oddnum=0, zeronum=0;
+    int counter;
+    
+    cout << "Please enter 20 integers, positive, negative, or zeros." << endl;
+    for (counter=0;counter<20;counter++)
+     {   
+         cin>>num;
+        if (num % 2 ==0)
+        {
+            evennum++;
+            if (num ==0)
+            zeronum++;
+        }
+        else
+        oddnum++;
+     
+     if (counter == 0)
+        cout<<"The numbers you entered are: "<<endl;
+        
+        cout<<num<<" ";
+}
+        
+        cout<<endl;
+        cout<<endl;
+        cout<<"There are "<<evennum<<" evens, which includes "<<zeronum<<" zeros."<<endl;
+        cout<<"The number of odd numbers is "<<oddnum;
+        
+        
+    
+    return 0;
+}

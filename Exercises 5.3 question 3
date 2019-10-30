@@ -1,0 +1,32 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+    int floor1, rooms, occupiedrooms;
+    double Totalrooms=0, Totalocccupiedrooms=0 , Totalunoccupiedrooms, Percentage; 
+    
+    cout<<"Please enter how many floor that the hotel has"<<endl;
+    cin>>floor1;
+    
+    for(int i=0; i<floor1; i++)
+    {
+        cout<<"How many number of rooms on the floor and how many of them are occupied"<<endl;
+        cin>>rooms>>occupiedrooms;
+        
+    Totalrooms +=rooms;
+    Totalocccupiedrooms +=occupiedrooms;
+    }
+    
+    Totalunoccupiedrooms = Totalrooms - Totalocccupiedrooms;
+    
+    Percentage = (Totalocccupiedrooms / Totalrooms) *100;
+    
+    cout<<"The hotel have "<<Totalrooms<<" rooms, "<<Totalocccupiedrooms<<" are occupied, ";
+    cout<<Totalunoccupiedrooms<<" are unoccupied, ";
+    cout<<"the percentage of rooms that are occupied is "<<fixed << setprecision(2)<<Percentage<<"% ";
+   
+    return 0;
+    
+}

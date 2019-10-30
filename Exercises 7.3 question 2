@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+void getData (double& v0, double& v1, double& t);
+void calculate (double& a, double& v0, double& v1, double& t);
+void displayAverageAcceleration (double a, double& v0, double& v1, double& t);
+double v1,v0,t;
+
+int main()
+{   
+    double calculation;
+    double a;
+    double v0,v1,t;
+    
+     getData (v0,v1,t);
+     calculate (calculation, v0 ,v1 ,t);
+     displayAverageAcceleration (calculation, v0, v1, t);
+     
+     return 0;
+}
+
+void getData (double& v0, double& v1, double& t)
+{
+    cout<<"Input the starting velocity (km/h): ";
+    cin>>v0;
+    cout<<endl;
+    cout<<"Input the ending velocity (km/h): ";
+    cin>>v1;
+    cout<<endl;
+    cout<<"Input the time span (s): ";
+    cin>>t;
+}
+
+void calculate (double& a, double& v0, double& v1, double& t)
+{
+    
+    a = (((v1*5/18) - (v0*5/18)) /t);
+}
+
+void displayAverageAcceleration  (double a, double& v0, double& v1, double& t)
+{
+    
+    cout<<endl<<endl;
+    cout<<"The average acceleration needed to accelerate a car from "<<v0<<" km/h to "<<v1<<" km/h in "<<t;
+    cout<<" seconds is "<<a<<" m/"<<"s^2";
+}

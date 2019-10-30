@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void calMulAndDiv(int num1, int num2, int& mul, int& div);
+
+
+int main()
+{
+    int num1,num2;
+    int mul1,division1;
+    cout<<"Please enter 2 integer numbers"<<endl;
+    cin>>num1>>num2;
+    cout<<"Input 2 integer numbers: "<<num1 <<" " <<num2<<endl;
+    
+    calMulAndDiv (num1,num2,mul1,division1) ;
+    
+    cout << num1<<" multiplied by "<< num2 <<" is " << mul1<<endl;
+    cout << num1<<" divided by "<< num2 <<" is " << division1;
+    
+    return 0;
+}
+
+void calMulAndDiv(int num1,int num2, int& mul, int& div)
+{
+    mul = num1*num2;
+    div = num1/num2;
+    
+}
