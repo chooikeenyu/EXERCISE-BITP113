@@ -1,0 +1,53 @@
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+const double pi = 3.14159;
+
+int main()
+{
+	double r, areacircle, areatriangle, l, w, l1, h, arearectangle;
+	char choice;
+
+	cout << "Please enter your choice 1-4,";
+	cout << " 1 - enter the radius of the circle and it will display its area,";
+	cout << " 2 - enter the length and width of the rectangle and it will display the area,";
+	cout << " 3 - enter the length of the triangle's base and its height and it will display the area,";
+	cout << " 4 - End" << endl;
+	cin >> choice;
+
+	switch (choice)
+	{
+	case '1': {
+		cin >> r;
+		areacircle = pi*r*r;
+		cout << "The area of circle is " << areacircle << endl;
+		break;
+	}
+
+	case '2': {
+		cin >> l >> w;
+		arearectangle = l*w;
+		cout << " The area of rectangle is " << arearectangle << endl;
+		break;
+	}
+
+	case '3': {
+		cin >> l1 >> h;
+		areatriangle = (0.5*l1*h);
+		cout << " The area of triangle is " << areatriangle;
+		break;
+	}
+
+	case '4': cout << "End";
+		break;
+
+	default: {
+		cout << "Please refresh and enter the choice again" << endl;
+		
+	}
+	}
+    return 0;
+}
+

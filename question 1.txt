@@ -1,0 +1,41 @@
+#include "stdafx.h"
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+	int coinnumber;
+	char choice;
+
+	cout << "This is a program to simulate coin toss" << endl;
+	cout << "Please enter H for head or T for tail" << endl;
+	cout << "If you matches the outcome of the toss, the program should display 'You win' , otherwise display 'You lose'" << endl;
+	cin >> choice;
+	
+	coinnumber = rand() % 1 + 0;
+
+	switch (choice)
+	{
+	case 'H': {
+		if (coinnumber = 1)
+			cout << "You win" << endl;
+		else
+			cout << "You lose";
+		break;
+	}
+	case 'T': {
+		if (coinnumber = 0)
+			cout << "You win" << endl;
+		else
+			cout << "You lose" << endl;
+		break;
+	}
+
+	default: cout << "Please refresh again and the program accept only 'H' and 'T' as input";
+
+	}
+
+    return 0;
+}
+
