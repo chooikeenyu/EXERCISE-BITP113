@@ -1,0 +1,48 @@
+#include <iostream>
+#include <fstream>
+
+
+using namespace std;
+
+int main()
+{
+	char name[10];
+	char g[10];
+	char answer[10] = {'A','C','D','A','A','B','B','D','C','D'};
+	int marks = 0;
+	double studMark;
+	
+	ifstream inputFile("studAnswers.txt");
+	ofstream outputFile("studResult.txt");
+	
+	if(!inputFile)
+	{
+		cout<<"File could not be opened \n";
+		exit(1);
+	}
+	
+	if(!outputFile)
+	{
+		cout<<"File could not be opened \n";
+		exit(1);
+	}
+	
+	while(inputFile>>name>>g[0]>>g[1]>>g[2]>>g[3]>>g[4]>>g[5]>>g[6]>>g[7]>>g[8]>>g[9])
+	{
+		marks = 0;
+		outputFile<<name<<" ";
+		for (int i = 0; i<10; i++)
+		{
+			if(g[i] == answer[i])
+			marks++;
+		}
+		
+		studMark = 0.5*marks;
+	
+		outputFile<<studMark<<"%"<<endl;
+	
+	}
+	cout<<"Please refer to the file studResult.txt \n";
+	
+	return 0;
+}
