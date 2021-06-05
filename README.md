@@ -2,4 +2,4 @@
 Programming technique exercises
 
 1. Number 1
-..1. Nu
+⋅⋅1. Nun2
